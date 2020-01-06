@@ -11,8 +11,6 @@ import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 import java.io.IOException;
 
-//import redis.embedded.RedisServer;
-
 @Slf4j
 @Profile({"local", "dev", "test"})
 @Configuration
@@ -25,12 +23,12 @@ public class TestRedisConfig {
     }
 
     @PostConstruct
-    public void startRedisServer() throws IOException {
+    public void startRedis() throws IOException {
         redisServer.start();
     }
 
     @PreDestroy
-    public void preDestroy() {
+    public void stopRedis() {
         redisServer.stop();
     }
 
