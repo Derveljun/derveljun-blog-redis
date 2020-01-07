@@ -1,5 +1,7 @@
 package com.derveljun.blogredis.domain;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,16 @@ public class TestUser {
 
     @Autowired
     UserRepository userRepository;
+
+    @Before
+    public void start() {
+
+    }
+
+    @After
+    public void stop() {
+
+    }
 
     @Test
     public void test () {
